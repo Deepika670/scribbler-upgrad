@@ -1,0 +1,39 @@
+header {
+    padding: 0 7px;
+}
+
+.header-logo {
+    font-family: 'Montez', cursive;
+    color: blue;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.sub-heading {
+    font-family: 'Ubuntu Mono';
+    margin-top: -27px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.buttons-container {
+    margin-top: 7px
+}
+
+.header-button{
+    background-color: blue;
+    /* border: none; */
+    border: 1px solid gray;
+    color: white;
+    padding: 8px 20px;
+    /* font-size: 15px; */
+}
+
+#signUpButton {
+    margin-right: 10px
+}
