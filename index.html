@@ -19,14 +19,46 @@
                 <h1 class="header-logo">ScriBBler</h1>
                 <p class="sub-heading">Explore, Imagine, Create</p>
             </div>
+
             <div class="buttons-container">
-                <button id="signUpButton" class="header-button">Sign Up</button>
-                <button id="signInButton" class="header-button">Sign In</button>
+
+                <button id="signUpButton" class="header-button" onclick="display()">Sign Up</button>
+                <div id="signUp-Modal" class="modal" onclick="display()">
+                    <div id="signUp-modal-content" class="signUp-content">
+                        <span class="close">&times;</span>
+                        <p class="signUp-title">Get Started</p>
+                        Name<input type="text" placeholder="Enter your name" required>
+                        Username<input type="text" placeholder="Enter your username" required>
+                        Password<input type="password" placeholder="Enter your password" required>
+                        Re-enter password<input type="password" placeholder="Enter your password" required>
+                        <button class="sign-up-button">Sign Up</button>
+                    </div>
+                </div>
+
+                <button id="signInButton" class="header-button" onclick="signInDisplay()">Sign In</button>
+                <div id="signIn-modal" class="modal">
+                    <div id="signIn-modal-content" class="signIn-content">
+                        <span class="close-signIn">&times;</span>
+                        <p class="signIn-title">Welcome Back!</p>
+                        Username<input type="text" placeholder="Enter your username" required>
+                        Password<input type="password" placeholder="Enter your password" required>
+                        <button class="sign-in-button">Sign In</button>
+                        <p class="not-a-member">Not a member?<button class="not-a-member-button">Sign Up</button></p>
+                    </div>
+                </div>
+
             </div>
 
+            
         </nav>
 
     </header>
+
+    <div class="home-buttons-container">
+        <button class="posts-button">All Posts</button>
+        <button class="posts-button">Create Post</button>
+    </div>
+
 </body>
 
 </html>
