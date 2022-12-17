@@ -1,80 +1,133 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
-    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
     <script src="./scripts/common.js"></script>
-    <link href="./styles/common.css" rel="stylesheet"/>
-    <link href="./styles/index.css" rel="stylesheet"/>
-</head>
+    <link href="./styles/common.css" rel="stylesheet" />
+    <link href="./styles/index.css" rel="stylesheet" />
+    <script src="./scripts/index.js"></script>
+  </head>
 
-<body>
+  <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <header>
-        <nav>
-            <div>
-                <h1 class="header-logo">ScriBBler</h1>
-                <p class="sub-heading">Explore, Imagine, Create</p>
-            </div>
+      <nav>
+        <div>
+          <h1 class="header-logo">ScriBBler</h1>
+          <p class="sub-heading">Explore, Imagine, Create</p>
+        </div>
 
-            <div class="buttons-container">
-
-                <button id="signUpButton" class="header-button" onclick="display()">Sign Up</button>
-                <div id="signUp-Modal" class="modal" onclick="display()">
-                    <div id="signUp-modal-content" class="signUp-content">
-                        <div id="div-container">
-                            <div id="close-div"><span class="close">&times;</span></div>
-                            <div id="content-div"><p class="signUp-title">Get Started</p></div>
-                        </div>
-                        Name<input type="text" placeholder="Enter your name" required>
-                        Username<input type="text" placeholder="Enter your username" required>
-                        Password<input type="password" placeholder="Enter your password" required>
-                        Re-enter password<input type="password" placeholder="Enter your password" required>
-                        <button class="sign-up-button">Sign Up</button>
-                    </div>
+        <div class="buttons-container">
+          <button id="signUpButton" class="header-button" onclick="display()">
+            Sign Up
+          </button>
+          <div id="signUp-Modal" class="modal" onclick="display()">
+            <div id="signUp-modal-content" class="signUp-content">
+              <div id="div-container">
+                <div id="close-div"><span class="close">&times;</span></div>
+                <div id="content-div">
+                  <p class="signUp-title">Get Started</p>
                 </div>
-
-                <button id="signInButton" class="header-button" onclick="signInDisplay()">Sign In</button>
-                <div id="signIn-modal" class="modal" onclick="signInDisplay()">
-                    <div id="signIn-modal-content" class="signIn-content">
-                        <div id="div-container">
-                            <div id="close-div"><span class="close-signIn">&times;</span></div>
-                            <div id="content-div"><p class="signIn-title">Welcome Back!</p></div>
-                        </div>
-                        Username<input type="text" placeholder="Enter your username" required>
-                        Password<input type="password" placeholder="Enter your password" required>
-                        <button class="sign-in-button">Sign In</button>
-                        <p class="not-a-member">Not a member?<button class="not-a-member-button">Sign Up</button></p>
-                    </div>
-                </div>
-
+              </div>
+              Name<input type="text" placeholder="Enter your name" required />
+              Username<input
+                type="text"
+                placeholder="Enter your username"
+                required
+              />
+              Password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              Re-enter password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button class="sign-up-button">Sign Up</button>
             </div>
+          </div>
 
-            
-        </nav>
-
+          <button
+            id="signInButton"
+            class="header-button"
+            onclick="signInDisplay()"
+          >
+            Sign In
+          </button>
+          <div id="signIn-modal" class="modal" onclick="signInDisplay()">
+            <div id="signIn-modal-content" class="signIn-content">
+              <div id="div-container">
+                <div id="close-div">
+                  <span class="close-signIn">&times;</span>
+                </div>
+                <div id="content-div">
+                  <p class="signIn-title">Welcome Back!</p>
+                </div>
+              </div>
+              Username<input
+                type="text"
+                placeholder="Enter your username"
+                required
+              />
+              Password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button class="sign-in-button">Sign In</button>
+              <p class="not-a-member">
+                Not a member?<button class="not-a-member-button">
+                  Sign Up
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="home-buttons-container">
-        <button class="posts-button">All Posts</button>
-        <button id="create-modal" class="posts-button" onclick="createDisplay()">Create Post</button>
-        <div class="create-post-modal" id="create-post-modal"onclick="createDisplay()">
-            <div class="create-post-content">
-                <div id="div-container">
-                    <div id="close-div"><span class="close-create">&times;</span></div>
-                    <div id="content-div"> <p class="create-post-title">Pen Your Post</p></div>
-                </div>
-                Title<input type="text" placeholder="Enter title of your post" class="create-post-title">
-                Contents<textarea placeholder="Enter the contents of your post" class="create-post-content"></textarea>
-                <button id="create-button" class="create-post-button">Create</button>
+      <button class="posts-button" onclick="displayAllPostsPage()">
+        All Posts
+      </button>
+      <button id="create-modal" class="posts-button" onclick="createDisplay()">
+        Create Post
+      </button>
+      <div
+        class="create-post-modal"
+        id="create-post-modal"
+        onclick="createDisplay()"
+      >
+        <div class="create-post-content">
+          <div id="div-container">
+            <div id="close-div"><span class="close-create">&times;</span></div>
+            <div id="content-div">
+              <p class="create-post-title">Pen Your Post</p>
             </div>
+          </div>
+          Title<input
+            type="text"
+            placeholder="Enter title of your post"
+            class="create-post-title"
+          />
+          Contents<textarea
+            placeholder="Enter the contents of your post"
+            class="create-post-content"
+          ></textarea>
+          <button id="create-button" class="create-post-button">Create</button>
         </div>
-
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

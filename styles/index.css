@@ -18,6 +18,7 @@ body {
   border: 1px solid gray;
   color: white;
   padding: 8px 20px;
+  cursor: pointer;
 }
 
 .posts-button:first-of-type {
