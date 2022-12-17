@@ -20,7 +20,7 @@ body {
   border-radius: 20px;
 
   box-shadow: #b882a2 0px 5px 15px;
-  width: 40%;
+  width: 42%;
 }
 
 .post-section:hover {
@@ -39,8 +39,8 @@ body {
   border-bottom-left-radius: 20px;
 
   color: #747270;
-  font-weight: bold;
-  font-size: 19px;
+  font-weight: 700;
+  /* font-size: 19px; */
   font-family: "Roboto";
 }
 
@@ -83,7 +83,7 @@ body {
   height: 60px;
   overflow: hidden;
 
-  margin-top: 0;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 
@@ -126,7 +126,7 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 291px auto;
   padding: 20px;
@@ -137,8 +137,12 @@ body {
 
 .delete-modal-heading {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-family: "Roboto";
+  /* width: 100%; */
+  /* text-align: center; */
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .delete-modal-buttons-section {

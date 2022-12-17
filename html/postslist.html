@@ -41,8 +41,12 @@
           </button>
           <div id="signUp-Modal" class="modal" onclick="display()">
             <div id="signUp-modal-content" class="signUp-content">
-              <span class="close">&times;</span>
-              <p class="signUp-title">Get Started</p>
+              <div id="div-container">
+                <div id="close-div"><span class="close">&times;</span></div>
+                <div id="content-div">
+                  <p class="signUp-title">Get Started</p>
+                </div>
+              </div>
               Name<input type="text" placeholder="Enter your name" required />
               Username<input
                 type="text"
@@ -70,10 +74,16 @@
           >
             Sign In
           </button>
-          <div id="signIn-modal" class="modal">
+          <div id="signIn-modal" class="modal" onclick="signInDisplay()">
             <div id="signIn-modal-content" class="signIn-content">
-              <span class="close-signIn">&times;</span>
-              <p class="signIn-title">Welcome Back!</p>
+              <div id="div-container">
+                <div id="close-div">
+                  <span class="close-signIn">&times;</span>
+                </div>
+                <div id="content-div">
+                  <p class="signIn-title">Welcome Back!</p>
+                </div>
+              </div>
               Username<input
                 type="text"
                 placeholder="Enter your username"
@@ -249,9 +259,9 @@
       <!-- TODO: Write code for delete post modal here -->
       <div id="deletePostConfirmationModal" class="delete-modal">
         <div class="delete-modal-buttons-heading-section">
-          <h3 class="delete-modal-heading">
+          <h4 class="delete-modal-heading">
             Are you sure you want to delete this post?
-          </h3>
+          </h4>
           <div class="delete-modal-buttons-section">
             <button onclick="postDelete()" class="delete-modal-buttons">
               Yes
