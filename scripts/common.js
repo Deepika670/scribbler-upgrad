@@ -30,3 +30,21 @@ function signInDisplay(){
         }
     }
 }
+
+function createDisplay(){
+    var createModal = document.getElementById("create-post-modal");
+    var createButton = document.getElementById("create-modal");
+    var span = document.getElementsByClassName("close-create")[0];
+    createButton.onclick = function() {
+        createModal.style.display = "block";
+      }
+    span.onclick = function(){
+        createModal.style.display = "none";
+    }
+    window.onclick = function(event){
+        if(event.target == createModal){
+            createModal.style.display = "none";
+        }
+    }
+
+}

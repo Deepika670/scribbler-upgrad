@@ -4,87 +4,14 @@ body {
     background-image: url("../images/background.jpg");
     background-size: cover;
     height: 100vh;
-
     overflow: hidden
 }
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: gray;
-    background-color: rgba(0,0,0,0.4)
-}
-.signUp-content, .signIn-content{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    margin :  100px auto;
-    padding: 20px;
-    border : 1px solid #888;
-    width: 25%;
-    height: 60%;
-}
-.close, .close-signIn{
-    color : #aaa;
-    float : right;
-    font-size : 28px;
-    font-weight: bold;
-}
-.close:hover, .close:focus, .close-signIn:hover, .close-signIn:focus{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-.signUp-title, .signIn-title{
-    border-bottom: 1px solid black;
-}
-input{
-    height: 25px;
-    padding: 3px;
-    background-color: #e2e8f0;
-    border: none;
-}
-input:active {
-    border: 0.2px solid gray;
-}
-
-.sign-up-button, .sign-in-button{
-    height: 30px;
-    background-color: rgb(7, 184, 75);
-    color: white;
-    border: none;
-}
-.not-a-member{
-    
-}
-.not-a-member-button{
-    color: blue;
-    font-weight: bold;
-    border: none;
-    background: none;
-}
-
-.center-button{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
 .home-buttons-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
 }
-
 .posts-button {
     background-color: orange;
     /* border: none; */
@@ -95,4 +22,61 @@ input:active {
 
 .posts-button:first-of-type {
     margin-right: 15px
+}
+
+
+
+
+
+
+
+.create-post-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: gray;
+    background-color: rgba(0,0,0,0.6)
+}
+.create-post-content{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin :  45px auto;
+    padding: 30px;
+    border : 1px solid #888;
+    width: 80%;
+    height: 70%;
+}
+.create-post-title{
+    width: 100%;
+}
+.create-post-content{
+    width: 90%;
+    height: 70%;
+}
+.create-post-button{
+    width: 120px;
+    height: 100px;
+    align-self: center;
+    color: white;
+    background-color: rgb(7, 184, 75);
+    border: none;
+}
+
+.close-create{
+    color : #aaa;
+    float : right;
+    font-size : 30px;
+    font-weight: bold;
+}
+.close-create:hover, .close-create:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

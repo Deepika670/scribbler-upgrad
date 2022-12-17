@@ -1,0 +1,22 @@
+body{
+    background: #ffeedd;
+}
+
+.container{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgba(231,227,227,1);
+    border-radius: 10px;
+    width: 40%;
+    height: 20vh;
+    display: flex;
+}
+#trash{
+    float: right;
+    top: 0;
+}
+.name{
+    background-color: white;
+    text-align: center;
+    border-radius: 10px 00px 0px 10px;
+    width: auto;
+}
