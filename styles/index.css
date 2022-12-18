@@ -38,6 +38,7 @@ body {
   overflow: auto;
   background-color: gray;
   background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 .create-post-content {
   background-color: white;
@@ -49,6 +50,7 @@ body {
   border: 1px solid #888;
   width: 75%;
   height: 70%;
+  overflow: hidden;
 }
 
 .label {
@@ -114,4 +116,31 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.closeCreatePost {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.closeCreatePost:hover,
+.closeCreatePost:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.create-modal-content {
+  background-color: #fefefe;
+
+  margin: 6% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  min-height: 400px;
+  height: auto;
+  overflow: hidden;
 }

@@ -39,35 +39,7 @@
           >
             Sign Up
           </button>
-          <div id="signUp-Modal" class="modal" onclick="displaySignUpModal()">
-            <div id="signUp-modal-content" class="signUp-content">
-              <div id="div-container">
-                <div id="close-div">
-                  <span class="close">&times;</span>
-                </div>
-                <div id="content-div">
-                  <p class="signUp-title">Get Started</p>
-                </div>
-              </div>
-              Name<input type="text" placeholder="Enter your name" required />
-              Username<input
-                type="text"
-                placeholder="Enter your username"
-                required
-              />
-              Password<input
-                type="password"
-                placeholder="Enter your password"
-                required
-              />
-              Re-enter password<input
-                type="password"
-                placeholder="Enter your password"
-                required
-              />
-              <button class="sign-up-button">Sign Up</button>
-            </div>
-          </div>
+
           <button
             id="signInButton"
             class="header-button"
@@ -75,50 +47,201 @@
           >
             Sign In
           </button>
-          <div id="signIn-modal" class="modal" onclick="displaySignInModal()">
-            <div id="signIn-modal-content" class="signIn-content">
-              <div id="div-container">
-                <div id="close-div">
-                  <span class="close">&times;</span>
-                </div>
-                <div id="content-div">
-                  <p class="signIn-title">Welcome Back!</p>
-                </div>
-              </div>
-              Username<input
-                type="text"
+        </div>
+      </nav>
+
+      <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-top-section">
+            <span class="close" onclick="userSignUpClose()">&times;</span>
+            <p class="header-modal-heading">Get Started</p>
+          </div>
+          <hr class="modal-line" />
+          <div class="sign-up-forms-container">
+            <form action="" class="sign-up-form-container">
+              <label for="name">Name</label>
+              <input type="text" required placeholder="Enter your name" />
+              <label for="username">Username</label>
+              <input
+                type="username"
                 placeholder="Enter your username"
                 required
               />
-              Password<input
+              <label>Password</label>
+              <input
                 type="password"
-                placeholder="Enter your password"
                 required
+                placeholder="Enter your password"
               />
-              <button class="sign-in-button">Sign In</button>
-              <p class="not-a-member">
-                Not a member?
-                <a href="#signUp-modal-content" class="not-a-member-button">
-                  Sign Up
-                </a>
-              </p>
-            </div>
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                required
+                placeholder="Re-enter your password"
+              />
+
+              <button type="submit" class="sign-up-button">Sign Up</button>
+            </form>
           </div>
         </div>
-      </nav>
+      </div>
+      <div id="signInModal" class="modal">
+        <div class="modal-content signin">
+          <div class="modal-top-section">
+            <span class="close">&times;</span>
+            <p class="header-modal-heading">Welcome Back!</p>
+          </div>
+          <hr class="modal-line" />
+          <div class="sign-up-forms-container">
+            <form action="" class="sign-up-form-container">
+              <label for="username">Username</label>
+              <input
+                type="username"
+                placeholder="Enter your username"
+                required
+              />
+              <label>Password</label>
+              <input
+                type="password"
+                required
+                placeholder="Enter your password"
+              />
+
+              <button type="submit" class="sign-up-button">Sign In</button>
+            </form>
+          </div>
+          <h4 class="not-a-member-question">
+            Not a member?
+            <span class="sign-up-text" onclick="redirectUserToSignUp()"
+              >Sign Up</span
+            >
+          </h4>
+        </div>
+      </div>
+
+      <!-- <div
+        id="signInModal"
+        class="modal"
+      >
+        <div
+          id="signIn-modal-content"
+          class="signIn-content"
+        >
+          <div id="div-container">
+            <div id="close-div">
+              <span class="close">&times;</span>
+            </div>
+            <div id="content-div">
+              <p class="signIn-title">Welcome Back!</p>
+            </div>
+          </div>
+          Username<input
+            type="text"
+            placeholder="Enter your username"
+            required
+          />
+          Password<input
+            type="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button class="sign-in-button">Sign In</button>
+          <p class="not-a-member">
+            Not a member?
+            <a
+              href="#signUp-modal-content"
+              class="not-a-member-button"
+            >
+              Sign Up
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div
+        id="signUpModal"
+        class="modal"
+      >
+        <div
+          id="signUp-modal-content"
+          class="signUp-content"
+        >
+          <div id="div-container">
+            <div id="close-div">
+              <span class="close">&times;</span>
+            </div>
+            <div id="content-div">
+              <p class="signUp-title">Get Started</p>
+            </div>
+          </div>
+          Name<input
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+          Username<input
+            type="text"
+            placeholder="Enter your username"
+            required
+          />
+          Password<input
+            type="password"
+            placeholder="Enter your password"
+            required
+          />
+          Re-enter password<input
+            type="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button class="sign-up-button">Sign Up</button>
+        </div>
+      </div> -->
     </header>
 
     <div class="home-buttons-container">
       <button class="posts-button" onclick="displayAllPostsPage()">
         All Posts
       </button>
-      <button id="create-modal" class="posts-button" onclick="createDisplay()">
+      <button
+        id="create-modal"
+        class="posts-button"
+        onclick="createPostModalDisplay()"
+      >
         Create Post
       </button>
-      <div
+      <div id="createPostModal" class="modal">
+        <div class="create-modal-content">
+          <div class="modal-top-section">
+            <span class="closeCreatePost">&times;</span>
+            <p class="header-modal-heading">Pen your post</p>
+          </div>
+          <hr class="modal-line" />
+          <div class="sign-up-forms-container">
+            <form action="" class="sign-up-form-container">
+              <label for="title">Title</label>
+              <input type="text" placeholder="Enter your username" required />
+              <label>Contents</label>
+              <textarea
+                required
+                placeholder="Enter the contents of your post"
+                cols="100"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="create-post-button"
+                id="createPostButton"
+              >
+                Create
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <div
         class="create-post-modal"
         id="create-post-modal"
-        onclick="createDisplay()"
       >
         <div class="create-post-content">
           <div id="div-container">
@@ -130,7 +253,10 @@
               <hr />
             </div>
           </div>
-          <label for="title" class="label">Title</label
+          <label
+            for="title"
+            class="label"
+            >Title</label
           ><input
             type="text"
             placeholder="Enter title of your post"
@@ -138,18 +264,26 @@
             required
             id="title"
           />
-          <label for="contents" class="label">Contents</label>
+          <label
+            for="contents"
+            class="label"
+            >Contents</label
+          >
           <textarea
             placeholder="Enter the contents of your post"
             class="create-post-comment"
             required
             id="contents"
           ></textarea>
-          <button id="create-button" class="create-post-button" type="submit">
+          <button
+            id="create-button"
+            class="create-post-button"
+            type="submit"
+          >
             Create
           </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>

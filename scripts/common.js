@@ -32,25 +32,8 @@
 //   };
 // }
 
-// function createDisplay() {
-//   var createModal = document.getElementById("create-post-modal");
-//   var createButton = document.getElementById("create-modal");
-//   var createClose = document.getElementsByClassName("close-create")[0];
-//   createButton.onclick = function () {
-//     createModal.style.display = "block";
-//   };
-//   createClose.onclick = function () {
-//     createModal.style.display = "none";
-//   };
-//   window.onclick = function (event) {
-//     if (event.target == createModal) {
-//       createModal.style.display = "none";
-//     }
-//   };
-// }
-
 function displaySignUpModal() {
-  let signUpModalElement = document.getElementById("signUp-Modal");
+  let signUpModalElement = document.getElementById("signUpModal");
   let closeElement = document.getElementsByClassName("close")[0];
 
   signUpModalElement.style.display = "block";
@@ -67,13 +50,12 @@ function displaySignUpModal() {
 }
 
 function displaySignInModal() {
-  let signInModalElement = document.getElementById("signIn-modal");
+  let signInModalElement = document.getElementById("signInModal");
   let closeElement = document.getElementsByClassName("close")[1];
 
   signInModalElement.style.display = "block";
 
   closeElement.onclick = function () {
-    console.log("something");
     signInModalElement.style.display = "none";
   };
 
@@ -82,4 +64,31 @@ function displaySignInModal() {
       signInModalElement.style.display = "none";
     }
   };
+}
+
+function redirectUserToSignUp() {
+  let signUpModalElement = document.getElementById("signUpModal");
+  let signInModalElement = document.getElementById("signInModal");
+  let closeElement = document.getElementsByClassName("close")[0];
+
+  signInModalElement.style.display = "none";
+  signUpModalElement.style.display = "block";
+
+  signUpModalElement.style.display = "block";
+
+  closeElement.onclick = function () {
+    signUpModalElement.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == signUpModalElement) {
+      signUpModalElement.style.display = "none";
+    }
+  };
+}
+
+function userSignUpClose() {
+  let signUpModalElement = document.getElementById("signUpModal");
+
+  signUpModalElement.style.display = "none";
 }
