@@ -1,0 +1,94 @@
+#pageDetailsContainer {
+  margin: 10px 40px;
+}
+
+#pageTitle {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.page-author-edit-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pageAuthor {
+  font-family: "Ubuntu Mono";
+  font-size: 20px;
+}
+
+#editPage {
+  background-color: #ed2553;
+  padding: 8px 17px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+#pageDescription {
+  margin-top: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+/* .like-button-text {
+    display: inline-block;
+  } */
+
+.comment-button-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#likeBlog {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 70%;
+  height: 60px;
+
+  margin-top: 30px;
+}
+
+#addList {
+  width: 100px;
+  padding: 5px 10px;
+  background-color: #ed2553;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#commentsContainer {
+  background-color: lightgray;
+  padding: 5px 10px;
+  width: 70%;
+  display: none;
+}
+
+p {
+  background-color: white;
+  padding: 10px;
+  color: black;
+}
+
+#likeBlog {
+  background-color: #ed2553;
+  padding: 10px 15px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  text-transform: capitalize;
+}
+
+.like {
+  text-transform: capitalize;
+}

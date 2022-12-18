@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- TODO: Include Font Awesome file here -->
+    <script
+      src="https://kit.fontawesome.com/5c1259473a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- TODO: Include Google Fonts file here -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../styles/common.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../scripts/common.js"></script>
+    <link href="../styles/post.css" rel="stylesheet" />
+
+    <script src="../scripts/postslist.js"></script>
+  </head>
+
+  <body>
+    <!-- TODO: Include all your code for the header and home page here -->
+    <header>
+      <nav>
+        <div>
+          <h1 class="header-logo">ScriBBler</h1>
+          <p class="sub-heading">Explore, Imagine, Create</p>
+        </div>
+
+        <div class="buttons-container">
+          <button id="signUpButton" class="header-button" onclick="display()">
+            Sign Up
+          </button>
+          <div id="signUp-Modal" class="modal" onclick="display()">
+            <div id="signUp-modal-content" class="signUp-content">
+              <div id="div-container">
+                <div id="close-div"><span class="close">&times;</span></div>
+                <div id="content-div">
+                  <p class="signUp-title">Get Started</p>
+                </div>
+              </div>
+              Name<input type="text" placeholder="Enter your name" required />
+              Username<input
+                type="text"
+                placeholder="Enter your username"
+                required
+              />
+              Password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              Re-enter password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button class="sign-up-button">Sign Up</button>
+            </div>
+          </div>
+
+          <button
+            id="signInButton"
+            class="header-button"
+            onclick="signInDisplay()"
+          >
+            Sign In
+          </button>
+          <div id="signIn-modal" class="modal" onclick="signInDisplay()">
+            <div id="signIn-modal-content" class="signIn-content">
+              <div id="div-container">
+                <div id="close-div">
+                  <span class="close-signIn">&times;</span>
+                </div>
+                <div id="content-div">
+                  <p class="signIn-title">Welcome Back!</p>
+                </div>
+              </div>
+              Username<input
+                type="text"
+                placeholder="Enter your username"
+                required
+              />
+              Password<input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button class="sign-in-button">Sign In</button>
+              <p class="not-a-member">
+                Not a member?
+                <a href="#signUp-modal-content" class="not-a-member-button">
+                  Sign Up
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="pageDetailsContainer">
+      <h3 id="pageTitle"></h3>
+      <div class="page-author-edit-section">
+        <p id="pageAuthor"></p>
+        <span id="editPage" onclick="editPage()">
+          Edit <i class="fas fa-edit"></i>
+        </span>
+      </div>
+      <p id="pageDescription"></p>
+
+      <div class="like-button-text">
+        <button id="likeBlog" onclick="postLiked()">
+          <i class="fa fa-thumbs-up"> Like</i>
+        </button>
+        <br />
+        <span id="commentCount">Be the first one to like this!</span>
+      </div>
+
+      <div class="comment-button-section">
+        <textarea
+          type="text"
+          placeholder="Leave a comment..."
+          id="userComments"
+          value=""
+          rows="6"
+          cols="80"
+        ></textarea>
+        <button id="addList" onclick="addComments(userComments)">
+          Comment
+        </button>
+      </div>
+      <div>
+        <h3>All comments</h3>
+        <div id="commentsContainer"></div>
+      </div>
+    </div>
+
+    <script src="../scripts/post.js"></script>
+  </body>
+</html>
