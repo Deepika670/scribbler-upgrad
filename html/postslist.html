@@ -36,13 +36,19 @@
         </div>
 
         <div class="buttons-container">
-          <button id="signUpButton" class="header-button" onclick="display()">
+          <button
+            id="signUpButton"
+            class="header-button"
+            onclick="displaySignUpModal()"
+          >
             Sign Up
           </button>
-          <div id="signUp-Modal" class="modal" onclick="display()">
+          <div id="signUp-Modal" class="modal" onclick="displaySignUpModal()">
             <div id="signUp-modal-content" class="signUp-content">
               <div id="div-container">
-                <div id="close-div"><span class="close">&times;</span></div>
+                <div id="close-div">
+                  <span class="close-signUp">&times;</span>
+                </div>
                 <div id="content-div">
                   <p class="signUp-title">Get Started</p>
                 </div>
@@ -70,11 +76,11 @@
           <button
             id="signInButton"
             class="header-button"
-            onclick="signInDisplay()"
+            onclick="displaySignInModal()"
           >
             Sign In
           </button>
-          <div id="signIn-modal" class="modal" onclick="signInDisplay()">
+          <div id="signIn-modal" class="modal" onclick="displaySignInModal()">
             <div id="signIn-modal-content" class="signIn-content">
               <div id="div-container">
                 <div id="close-div">
