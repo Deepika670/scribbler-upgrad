@@ -1,7 +1,7 @@
 let deletionElement;
 
-function deletePost(el) {
-  deletionElement = el;
+function deletePost(id) {
+  deletionElement = document.getElementById(id);
 
   displayDeletePostModal();
 }
@@ -12,7 +12,7 @@ function displayDeletePostModal() {
 }
 
 function postDelete() {
-  deletionElement.parentNode.parentNode.parentNode.style.display = "none";
+  deletionElement.style.display = "none";
 
   document.getElementById("deletePostConfirmationModal").style.display = "none";
 }
