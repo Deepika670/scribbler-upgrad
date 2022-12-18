@@ -15,8 +15,6 @@ pageDescriptionElement.innerHTML = pageDescriptionText;
 let isEditButtonActive = false;
 
 function editPage() {
-  // console.log(editPageElement.innerText);
-  // if (editPageElement.innerText === 'Edit') {
   if (!isEditButtonActive) {
     pageTitleElement.setAttribute("contenteditable", true);
     pageDescriptionElement.setAttribute("contenteditable", true);
@@ -27,20 +25,6 @@ function editPage() {
     editPageElement.addEventListener("click", savePage);
     isEditButtonActive = false;
   }
-  // if (isEditButtonActive) {
-  //   editPageElement.innerText = 'Edited Saved';
-  // }
-
-  // editPageElement.innerText = 'Save';
-  // }
-  // else if (editPageElement.innerText === 'Save') {
-  //   pageTitleElement.setAttribute('contenteditable', false);
-  //   pageDescriptionElement.setAttribute('contenteditable', false);
-
-  //   pageTitleElement.style.outline = 'none';
-  //   pageDescriptionElement.style.outline = 'none';
-  //   editPageElement.innerText === 'Edit';
-  // }
 }
 
 function savePage() {
