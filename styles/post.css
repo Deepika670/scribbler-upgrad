@@ -92,3 +92,7 @@ p {
 .like {
   text-transform: capitalize;
 }
+
+.divider {
+  margin-top: -25px;
+}
