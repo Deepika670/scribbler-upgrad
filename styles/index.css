@@ -11,18 +11,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 90vh;
+  gap: 25px;
 }
 .posts-button {
   background-color: orange;
   /* border: none; */
   border: 1px solid gray;
   color: white;
-  padding: 8px 20px;
+  padding: 12px 20px;
   cursor: pointer;
 }
 
 .posts-button:first-of-type {
-  margin-right: 15px;
+  /* margin-right: 15px; */
+  padding: 12px 30px;
 }
 
 .create-post-modal {

@@ -1,5 +1,5 @@
 header {
-  padding: 0 7px;
+  padding: 10px 15px 0 15px;
   /* width: 100%; */
 }
 .header-logo {
@@ -29,13 +29,13 @@ nav {
   /* border: none; */
   border: 1px solid gray;
   color: white;
-  padding: 8px 20px;
+  padding: 13px 30px;
   cursor: pointer;
   /* font-size: 15px; */
 }
 
 #signUpButton {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 #close-div,
 #content-div {

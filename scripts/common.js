@@ -1,4 +1,4 @@
-function display() {
+function signUpDisplay() {
   var signUpModal = document.getElementById("signUp-Modal");
   var signUpButton = document.getElementById("signUpButton");
   var span = document.getElementsByClassName("close")[0];
@@ -15,9 +15,10 @@ function display() {
   };
 }
 function signInDisplay() {
+  console.log("Sign In clicked");
   var signInModal = document.getElementById("signIn-modal");
   var signInButton = document.getElementById("signInButton");
-  var span = document.getElementsByClassName("close-signIn")[0];
+  var span = document.getElementsByClassName("close-signIn");
   signInButton.onclick = function () {
     signInModal.style.display = "block";
   };
